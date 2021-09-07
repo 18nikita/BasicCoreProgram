@@ -4,42 +4,19 @@ namespace BasicCoreProgram
 {
     class Program
     {
-        static void Main(string[] args)
-
+        public static void leapYear2()
         {
-            Console.WriteLine("Let's flip a coin 10000 times");
-            Coinflip();
-        }
-        private static int Coinflip()
-
-        {
-            Random Rand = new Random();
-
-            int heads = 0;
-            int tails = 0;
-            int result = 0;
-
-
-            for (int i = 0; i < 10000; i++)
-
-            { 
-                result = Rand.Next(0, 2);
-
-                if (result == 1)
-
-                { 
-                    heads++;
-                }
-
-                else
-
-                {
-                    tails++;
-                }
+            int year;
+            Console.WriteLine("Enter a Year: ");
+            year = int.Parse(Console.ReadLine());
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+            {
+                Console.WriteLine("Entered year is Leap year " + year);
             }
-            Console.WriteLine("heads was flipped {0} times", heads);
-            Console.WriteLine("tails was flipped {0} times", tails);
-            return result;
+            else
+            {
+                Console.WriteLine("Entered year is Common year " + year);
+            }
         }
     }
 }
