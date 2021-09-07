@@ -2,21 +2,22 @@
 
 namespace BasicCoreProgram
 {
-    class Program
+    class harmonicnum
     {
-        public static void leapYear2()
+        static double nthHarmonic(int N)
         {
-            int year;
-            Console.WriteLine("Enter a Year: ");
-            year = int.Parse(Console.ReadLine());
-            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+            float harmonic = 1;
+            for (int i = 2; i <= N; i++)
             {
-                Console.WriteLine("Entered year is Leap year " + year);
+                harmonic += (float)1 / i;
             }
-            else
-            {
-                Console.WriteLine("Entered year is Common year " + year);
-            }
+            return harmonic;
         }
+        public static void harmpnicnum1()
+        {
+            int N = 9;
+            Console.WriteLine(nthHarmonic(N));
+        }
+
     }
 }
