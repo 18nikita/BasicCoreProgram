@@ -2,23 +2,21 @@
 
 namespace BasicCoreProgram
 {
-    class SwapNumber
+    class OddEven
     {
-        public static void SwapNumber1()
+        public static void OddEven2()
         {
-            int a;
-            Console.WriteLine("Enter 1st number");
-            a = int.Parse(Console.ReadLine());
-            int b;
-            Console.WriteLine("Enter 2nd number");
-            b = int.Parse(Console.ReadLine());
-            a = a + b;
-            b = a - b;
-            a = a - b;
-            Console.WriteLine("After swaping " + a);
-            Console.WriteLine("After swaping" + b);
-
-
+            int number;
+            Console.WriteLine("Enter Number");
+            number = int.Parse(Console.ReadLine());
+            if (number % 2 == 0)
+            {
+                Console.WriteLine("Entered number is Even " + number);
+            }
+            else
+            {
+                Console.WriteLine("Entered number is Odd " + number);
+            }
         }
-    }
+}
 }
