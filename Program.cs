@@ -2,21 +2,21 @@
 
 namespace BasicCoreProgram
 {
-    class OddEven
+    class Vowel_9
     {
-        public static void OddEven2()
+        public static void Vowel()
         {
-            int number;
-            Console.WriteLine("Enter Number");
-            number = int.Parse(Console.ReadLine());
-            if (number % 2 == 0)
+            char letter;
+            Console.WriteLine("Enter Letter: ");
+            letter = char.Parse(Console.ReadLine());
+            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
             {
-                Console.WriteLine("Entered number is Even " + number);
+                Console.WriteLine("Entered letter is Vowel " + letter);
             }
             else
             {
-                Console.WriteLine("Entered number is Odd " + number);
+                Console.WriteLine("Entered letter is Consonant " + letter);
             }
         }
-}
+    }
 }
