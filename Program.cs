@@ -2,22 +2,21 @@
 
 namespace BasicCoreProgram
 {
-    class harmonicnum
+    class factors
     {
-        static double nthHarmonic(int N)
+        public static void primeFactor()
         {
-            float harmonic = 1;
-            for (int i = 2; i <= N; i++)
+            int a, b;
+            Console.WriteLine("Enter a Number");
+            a = int.Parse(Console.ReadLine());
+            for (b = 1; b <= a; b++)
             {
-                harmonic += (float)1 / i;
+                if (a % b == 0)
+                {
+                    Console.WriteLine(b + "is a prime factor of" + a);
+                }
             }
-            return harmonic;
         }
-        public static void harmpnicnum1()
-        {
-            int N = 9;
-            Console.WriteLine(nthHarmonic(N));
-        }
-
     }
+}
 }
